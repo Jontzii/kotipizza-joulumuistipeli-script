@@ -4,7 +4,7 @@ async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const roundsToPlay = 2;
+const roundsToPlay = parseInt(process.env.ROUNDS_TO_PLAY, 10) || 10;
 
 const email = process.env.KOTIPIZZA_EMAIL;
 if (!email) {
@@ -35,7 +35,7 @@ for (let round = 0; round < roundsToPlay; round++) {
   // Click continue
   const continueButton = await page.$('button[type="button"]');
   await continueButton.click();
-  await delay(3000); // Wait for the second page to load
+  await delay(2000); // Wait for the second page to load
 
   // Solve the actual puzzle
 

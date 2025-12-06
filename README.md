@@ -9,5 +9,4 @@ This script is intended for educational purposes only and using it may break ter
 ## How to use
 
 1. `npm ci` to install dependencies.
-2. Adjust the rounds to play by changing the `roundsToPlay` variable in `index.js`.
-3. `KOTIPIZZA_EMAIL=your-email@example.com node index.js` to run the script.
+2. `KOTIPIZZA_EMAIL=your-email@example.com ROUNDS_TO_PLAY=10 node index.js` to run the script.
