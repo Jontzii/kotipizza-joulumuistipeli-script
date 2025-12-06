@@ -12,8 +12,10 @@ if (!email) {
   process.exit(1);
 }
 
+const runHeadless = process.env.HEADLESS === "true";
+
 // Launch the browser and open a new blank page.
-const browser = await puppeteer.launch({ headless: false });
+const browser = await puppeteer.launch({ headless: runHeadless });
 const page = await browser.newPage();
 page.on("console", (msg) => console.log("PAGE LOG:", msg.text()));
 

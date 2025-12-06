@@ -10,3 +10,5 @@ This script is intended for educational purposes only and using it may break ter
 
 1. `npm ci` to install dependencies.
 2. `KOTIPIZZA_EMAIL=your-email@example.com ROUNDS_TO_PLAY=10 node index.js` to run the script.
+
+If you want to run the browser in headless mode (without a visible window), you can set the `HEADLESS` environment variable to `true`:
